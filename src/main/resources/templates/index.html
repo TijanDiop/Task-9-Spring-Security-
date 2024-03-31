@@ -2,10 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Spring Security Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            text-align: center; /* Центрирование кнопки */
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none; /* Убрать подчёркивание ссылки */
+            display: inline-block; /* Для правильного отображения */
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to Index PAGE!</h1>
-
-
+<div class="header">Welcome to Start PAGE!</div>
+<div class="button-container">
+    <a th:href="@{/user/myInfo}" class="button">My Information</a>
+</div>
 </body>
 </html>
